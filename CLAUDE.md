@@ -18,6 +18,7 @@ Backend yok — tüm içerik `data/` klasöründen statik olarak yönetiliyor.
 
 ```
 src/
+├── app/[locale]/layout.tsx     # Hem root hem locale layout (ayrı bir app/layout.tsx YOK — next-intl önerisi)
 ├── app/[locale]/(marketing)/   # Sadece routing + layout + metadata
 ├── components/
 │   ├── ui/                     # shadcn bileşenleri (dokunma, shadcn CLI ile ekle)
@@ -32,8 +33,10 @@ src/
 ├── schemas/                     # Zod şemaları
 ├── i18n/                        # next-intl routing/request config
 ├── messages/                    # tr.json, en.json çeviriler
-└── middleware.ts                # next-intl middleware
+└── proxy.ts                      # next-intl middleware (Next.js 16: middleware.ts değil proxy.ts)
 ```
+
+**Not:** `app/layout.tsx` (locale dışı bir root layout) yok — `app/[locale]/layout.tsx` hem `<html lang={locale}>`/`<body>` tag'lerini hem de `NextIntlClientProvider`'ı barındırıyor. Projede locale prefix'i taşımayan hiçbir sayfa olmadığı için next-intl'in resmi önerdiği bu pattern kullanılıyor.
 
 ## Katman Kuralları (ÖNEMLİ — asla ihlal etme)
 
