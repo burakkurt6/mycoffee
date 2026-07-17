@@ -14,5 +14,18 @@
     "description": "Özenle seçilmiş kahve çekirdeklerimizi ve ekipmanlarımızı keşfedin.",
     "backToProducts": "Ürünlere Dön",
     "notFound": "Aradığınız ürün bulunamadı."
+  },
+  "AboutPage": {
+    "title": "Hakkımızda",
+    "description": "1998'den bu yana özenle kavrulmuş kahvelerimizle kahve tutkunlarını buluşturuyoruz.",
+    "paragraph1": "MyCoffee, 1998 yılında küçük bir kavurma atölyesinde başladığı yolculuğuna bugün de aynı tutkuyla devam ediyor. Amacımız, dünyanın dört bir yanından seçtiğimiz özel kahve çekirdeklerini en taze haliyle fincanınıza ulaştırmak.",
+    "paragraph2": "Yıllar içinde büyüsek de kahveye olan saygımız hiç değişmedi: her parti elle seçiliyor, her kavurma titizlikle takip ediliyor. Bugün hem filtre kahve severlere hem espresso tutkunlarına hitap eden geniş bir ürün yelpazesi sunuyoruz.",
+    "valuesHeading": "Değerlerimiz",
+    "value1Title": "Kalite",
+    "value1Description": "Sadece özenle seçilmiş, izlenebilir kaynaklardan gelen çekirdeklerle çalışıyoruz.",
+    "value2Title": "Sürdürülebilirlik",
+    "value2Description": "Üretici ortaklarımızla uzun vadeli ve adil ilişkiler kurmaya özen gösteriyoruz.",
+    "value3Title": "Ustalık",
+    "value3Description": "Her kavurma partisi, yılların deneyimiyle kazanılmış ustalıkla hazırlanıyor."
   }
 }

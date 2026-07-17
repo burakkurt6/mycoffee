@@ -14,5 +14,18 @@
     "description": "Discover our carefully selected coffee beans and equipment.",
     "backToProducts": "Back to Products",
     "notFound": "The product you're looking for could not be found."
+  },
+  "AboutPage": {
+    "title": "About Us",
+    "description": "Since 1998, we've been bringing coffee lovers together through carefully roasted coffee.",
+    "paragraph1": "MyCoffee began its journey in 1998 in a small roasting workshop, and we continue that same passion today. Our goal is to bring specialty coffee beans, carefully selected from around the world, to your cup at their freshest.",
+    "paragraph2": "Even as we've grown over the years, our respect for coffee hasn't changed: every batch is hand-picked, every roast is carefully monitored. Today we offer a wide range of products for both filter coffee lovers and espresso enthusiasts.",
+    "valuesHeading": "Our Values",
+    "value1Title": "Quality",
+    "value1Description": "We work only with carefully selected beans from traceable sources.",
+    "value2Title": "Sustainability",
+    "value2Description": "We strive to build long-term, fair relationships with our producer partners.",
+    "value3Title": "Craftsmanship",
+    "value3Description": "Every roasting batch is prepared with skill earned through years of experience."
   }
 }
