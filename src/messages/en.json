@@ -2,5 +2,11 @@
   "HomePage": {
     "title": "Start Your Day With Coffee",
     "description": "Discover our coffees, carefully roasted and brewed from fresh beans."
+  },
+  "Layout": {
+    "changeLanguage": "Change language"
+  },
+  "Footer": {
+    "rightsReserved": "All rights reserved."
   }
 }

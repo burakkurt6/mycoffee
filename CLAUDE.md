@@ -8,7 +8,7 @@ Backend yok — tüm içerik `data/` klasöründen statik olarak yönetiliyor.
 - **Framework:** Next.js 16 (App Router), React 19, TypeScript
 - **Paket yöneticisi:** pnpm (npm/yarn KULLANMA)
 - **UI:** shadcn/ui + Tailwind CSS
-- **İkonlar:** lucide-react
+- **İkonlar:** lucide-react (UI ikonları), react-icons (`react-icons/si` — Simple Icons seti, marka/sosyal medya logoları — lucide-react marka ikonlarını içermiyor)
 - **Form:** react-hook-form + zod
 - **i18n:** next-intl (`/tr`, `/en` prefix'li URL yapısı)
 - **Render stratejisi:** SSG (Static Site Generation) — mümkün olan her yerde

@@ -2,5 +2,11 @@
   "HomePage": {
     "title": "Güne Kahveyle Başlayın",
     "description": "Özenle kavrulmuş, taze çekirdeklerle hazırlanan kahvelerimizi keşfedin."
+  },
+  "Layout": {
+    "changeLanguage": "Dili değiştir"
+  },
+  "Footer": {
+    "rightsReserved": "Tüm hakları saklıdır."
   }
 }
