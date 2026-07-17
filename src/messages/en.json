@@ -27,5 +27,25 @@
     "value2Description": "We strive to build long-term, fair relationships with our producer partners.",
     "value3Title": "Craftsmanship",
     "value3Description": "Every roasting batch is prepared with skill earned through years of experience."
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "description": "Reach out to us using the form below for any questions or requests.",
+    "contactInfoHeading": "Contact Information"
+  },
+  "ContactForm": {
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Your full name",
+    "nameError": "Please enter your name with at least 2 characters.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "emailError": "Please enter a valid email address.",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "messageError": "Your message must be at least 10 characters.",
+    "submitButton": "Send",
+    "submitting": "Sending...",
+    "successMessage": "Your message has been sent successfully, thank you!",
+    "errorMessage": "There was a problem sending your message, please try again."
   }
 }

@@ -69,6 +69,8 @@ src/
 Ürün, kategori, site bilgisi gibi içerikler `data/*.ts` dosyalarından değiştirilir.
 Bu dosyalar `types/index.ts`'teki tiplere uygun olmalı. Yeni ürün eklemek = `data/products.ts`'e obje eklemek, başka hiçbir yer değişmemeli.
 
+**Not:** İletişim formu şu an sadece console.log ile çalışıyor, gerçek email gönderimi (Resend vb.) henüz entegre edilmedi — ileride ayrı bir adımda eklenecek.
+
 ## Git / Workflow
 
 - Her aşama (kurulum, i18n, data layer, UI, sayfalar, form, SEO) ayrı commit

@@ -27,5 +27,25 @@
     "value2Description": "Üretici ortaklarımızla uzun vadeli ve adil ilişkiler kurmaya özen gösteriyoruz.",
     "value3Title": "Ustalık",
     "value3Description": "Her kavurma partisi, yılların deneyimiyle kazanılmış ustalıkla hazırlanıyor."
+  },
+  "ContactPage": {
+    "title": "İletişim",
+    "description": "Sorularınız veya talepleriniz için bize aşağıdaki formdan ulaşabilirsiniz.",
+    "contactInfoHeading": "İletişim Bilgileri"
+  },
+  "ContactForm": {
+    "nameLabel": "Ad Soyad",
+    "namePlaceholder": "Adınız ve soyadınız",
+    "nameError": "Lütfen adınızı en az 2 karakter olacak şekilde girin.",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "ornek@eposta.com",
+    "emailError": "Lütfen geçerli bir e-posta adresi girin.",
+    "messageLabel": "Mesajınız",
+    "messagePlaceholder": "Mesajınızı buraya yazın...",
+    "messageError": "Mesajınız en az 10 karakter olmalı.",
+    "submitButton": "Gönder",
+    "submitting": "Gönderiliyor...",
+    "successMessage": "Mesajınız başarıyla gönderildi, teşekkür ederiz!",
+    "errorMessage": "Mesajınız gönderilirken bir sorun oluştu, lütfen tekrar deneyin."
   }
 }
