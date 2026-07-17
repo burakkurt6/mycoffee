@@ -8,5 +8,11 @@
   },
   "Footer": {
     "rightsReserved": "All rights reserved."
+  },
+  "ProductsPage": {
+    "title": "Our Products",
+    "description": "Discover our carefully selected coffee beans and equipment.",
+    "backToProducts": "Back to Products",
+    "notFound": "The product you're looking for could not be found."
   }
 }

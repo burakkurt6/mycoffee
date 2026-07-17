@@ -8,5 +8,11 @@
   },
   "Footer": {
     "rightsReserved": "Tüm hakları saklıdır."
+  },
+  "ProductsPage": {
+    "title": "Ürünlerimiz",
+    "description": "Özenle seçilmiş kahve çekirdeklerimizi ve ekipmanlarımızı keşfedin.",
+    "backToProducts": "Ürünlere Dön",
+    "notFound": "Aradığınız ürün bulunamadı."
   }
 }
