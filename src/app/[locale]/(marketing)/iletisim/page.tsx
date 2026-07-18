@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/forms/contact-form";
 import { siteConfig } from "@/data/site";
+import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/types";
 
 type Props = {
@@ -13,10 +14,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "ContactPage" });
 
-  return {
+  return buildMetadata({
+    locale: locale as Locale,
+    path: "/iletisim",
     title: t("title"),
     description: t("description"),
-  };
+  });
 }
 
 export default async function ContactPage({ params }: Props) {

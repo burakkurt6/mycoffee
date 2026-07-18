@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -6,7 +7,14 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { env } from "@/lib/env";
 import "../globals.css";
+
+export function generateMetadata(): Metadata {
+  return {
+    metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
+  };
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -7,11 +7,14 @@ import { Link } from "@/i18n/navigation";
 import { products } from "@/data/products";
 import { getCategoryById } from "@/lib/categories";
 import { getProductBySlug } from "@/lib/products";
+import { buildMetadata } from "@/lib/seo";
 import type { Locale, Product } from "@/types";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
+
+export const dynamic = "force-static";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -26,18 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const localizedLocale = locale as Locale;
-  const name = product.name[localizedLocale];
-  const description = product.description[localizedLocale];
 
-  return {
-    title: name,
-    description,
-    openGraph: {
-      title: name,
-      description,
-      images: [{ url: product.image }],
-    },
-  };
+  return buildMetadata({
+    locale: localizedLocale,
+    path: `/urunler/${slug}`,
+    title: product.name[localizedLocale],
+    description: product.description[localizedLocale],
+    image: product.image,
+  });
 }
 
 export default async function ProductDetailPage({ params }: Props) {

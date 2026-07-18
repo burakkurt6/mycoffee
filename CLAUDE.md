@@ -20,13 +20,16 @@ Backend yok — tüm içerik `data/` klasöründen statik olarak yönetiliyor.
 src/
 ├── app/[locale]/layout.tsx     # Hem root hem locale layout (ayrı bir app/layout.tsx YOK — next-intl önerisi)
 ├── app/[locale]/(marketing)/   # Sadece routing + layout + metadata
+├── app/sitemap.ts               # Tüm route'lar × her iki locale (locale-prefiksiz, /sitemap.xml)
+├── app/robots.ts                # /robots.txt, sitemap.ts'i işaret eder
+├── app/opengraph-image.tsx      # Varsayılan OG görseli (locale-prefiksiz, tüm sayfalara miras kalır)
 ├── components/
 │   ├── ui/                     # shadcn bileşenleri (dokunma, shadcn CLI ile ekle)
 │   ├── layout/                 # header, footer, language-switcher
 │   ├── sections/                # hero, feature-grid, cta
 │   ├── products/                # product-card, product-grid, product-detail
 │   └── forms/                   # contact-form
-├── lib/                         # Pure TS helper, third-party client init
+├── lib/                         # Pure TS helper, third-party client init (env.ts, seo.ts dahil)
 ├── actions/                     # Server Actions ("use server")
 ├── data/                        # Statik içerik (tek doğruluk kaynağı)
 ├── types/                       # Paylaşılan TS type'ları
@@ -70,6 +73,8 @@ src/
 Bu dosyalar `types/index.ts`'teki tiplere uygun olmalı. Yeni ürün eklemek = `data/products.ts`'e obje eklemek, başka hiçbir yer değişmemeli.
 
 **Not:** İletişim formu şu an sadece console.log ile çalışıyor, gerçek email gönderimi (Resend vb.) henüz entegre edilmedi — ileride ayrı bir adımda eklenecek.
+
+**Not:** Production'a deploy ederken `.env` dosyasında `NEXT_PUBLIC_SITE_URL` gerçek domain'e güncellenmeli.
 
 ## Git / Workflow
 
