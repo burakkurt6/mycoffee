@@ -1,3 +1,5 @@
+// image path'leri şu an placeholder SVG - gerçek ürün fotoğrafları hazır olduğunda
+// public/images/products/ altına aynı isimle .jpg/.webp olarak eklenip path burada güncellenmelidir
 import type { Product } from "@/types";
 
 export const products: Product[] = [
@@ -13,7 +15,7 @@ export const products: Product[] = [
       tr: "Çiçeksi ve narenciye notaları taşıyan, açık kavrulmuş filtre kahve.",
       en: "A light-roasted filter coffee with floral and citrus notes.",
     },
-    image: "/images/products/placeholder-1.jpg",
+    image: "/images/products/etiyopya-yirgacheffe.svg",
     price: 320,
     currency: "TRY",
     featured: true,
@@ -30,7 +32,7 @@ export const products: Product[] = [
       tr: "Yoğun gövdeli, çikolata ve fındık tonlarıyla dengeli bir espresso harmanı.",
       en: "A full-bodied espresso blend balanced with chocolate and hazelnut tones.",
     },
-    image: "/images/products/placeholder-2.jpg",
+    image: "/images/products/klasik-espresso-harmani.svg",
     price: 280,
     currency: "TRY",
     featured: true,
@@ -47,7 +49,7 @@ export const products: Product[] = [
       tr: "Karamel ve kırmızı meyve notalarıyla öne çıkan dengeli bir kahve.",
       en: "A balanced coffee with notable caramel and red fruit notes.",
     },
-    image: "/images/products/placeholder-3.jpg",
+    image: "/images/products/kolombiya-supremo.svg",
     price: 300,
     currency: "TRY",
   },
@@ -63,7 +65,7 @@ export const products: Product[] = [
       tr: "Ev kullanımına uygun, seramik gövdeli filtre kahve demleme ekipmanı.",
       en: "A ceramic pour-over dripper suited for home brewing.",
     },
-    image: "/images/products/placeholder-4.jpg",
+    image: "/images/products/pour-over-dripper.svg",
     price: 450,
     currency: "TRY",
   },
