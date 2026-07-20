@@ -1,5 +1,5 @@
-// Bu sayfadaki içerik örnek/placeholder metindir — gerçek içerik kullanıcı tarafından güncellenecek.
 import type { Metadata } from "next";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
@@ -38,26 +38,44 @@ function AboutPageContent() {
   ];
 
   return (
-    <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">{t("title")}</h1>
-      <div className="mt-6 space-y-4 text-muted-foreground">
-        <p>{t("paragraph1")}</p>
-        <p>{t("paragraph2")}</p>
+    <main className="flex-1">
+      <div className="relative h-[320px] w-full sm:h-[400px] md:h-[480px]">
+        <Image
+          src="/images/about/about-hero.webp"
+          alt={t("heroAlt")}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <h1 className="text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            {t("title")}
+          </h1>
+        </div>
       </div>
 
-      <h2 className="mt-12 text-xl font-semibold tracking-tight">
-        {t("valuesHeading")}
-      </h2>
-      <ul className="mt-6 grid gap-6 sm:grid-cols-3">
-        {values.map((value) => (
-          <li key={value.title}>
-            <p className="font-medium">{value.title}</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {value.description}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div className="mx-auto w-full max-w-3xl px-6 py-16">
+        <div className="space-y-4 text-muted-foreground">
+          <p>{t("paragraph1")}</p>
+          <p>{t("paragraph2")}</p>
+        </div>
+
+        <h2 className="mt-12 text-xl font-semibold tracking-tight">
+          {t("valuesHeading")}
+        </h2>
+        <ul className="mt-6 grid gap-6 sm:grid-cols-3">
+          {values.map((value) => (
+            <li key={value.title}>
+              <p className="font-medium">{value.title}</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {value.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }

@@ -19,8 +19,9 @@
   "AboutPage": {
     "title": "About Us",
     "description": "Since 1998, we've been bringing coffee lovers together through carefully roasted coffee.",
-    "paragraph1": "MyCoffee began its journey in 1998 in a small roasting workshop, and we continue that same passion today. Our goal is to bring specialty coffee beans, carefully selected from around the world, to your cup at their freshest.",
-    "paragraph2": "Even as we've grown over the years, our respect for coffee hasn't changed: every batch is hand-picked, every roast is carefully monitored. Today we offer a wide range of products for both filter coffee lovers and espresso enthusiasts.",
+    "paragraph1": "It all began in 2016, on a small farm in the highlands of Honduras. We drank a cup of coffee brewed from sun-dried beans hand-picked by a local grower — and it was unlike anything we had ever tasted. Fruity, balanced, unforgettable.",
+    "paragraph2": "That day, inspired by what we'd found, we set out on a journey: to seek out the world's finest coffee beans and bring them to your cup with the care they deserve.",
+    "heroAlt": "Coffee beans being roasted",
     "valuesHeading": "Our Values",
     "value1Title": "Quality",
     "value1Description": "We work only with carefully selected beans from traceable sources.",

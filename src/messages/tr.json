@@ -19,8 +19,9 @@
   "AboutPage": {
     "title": "Hakkımızda",
     "description": "1998'den bu yana özenle kavrulmuş kahvelerimizle kahve tutkunlarını buluşturuyoruz.",
-    "paragraph1": "MyCoffee, 1998 yılında küçük bir kavurma atölyesinde başladığı yolculuğuna bugün de aynı tutkuyla devam ediyor. Amacımız, dünyanın dört bir yanından seçtiğimiz özel kahve çekirdeklerini en taze haliyle fincanınıza ulaştırmak.",
-    "paragraph2": "Yıllar içinde büyüsek de kahveye olan saygımız hiç değişmedi: her parti elle seçiliyor, her kavurma titizlikle takip ediliyor. Bugün hem filtre kahve severlere hem espresso tutkunlarına hitap eden geniş bir ürün yelpazesi sunuyoruz.",
+    "paragraph1": "Her şey 2016'da, Honduras'ın dağlık kesimindeki küçük bir çiftlikte başladı. Yerel üreticinin elleriyle topladığı, güneşte kurutulmuş çekirdeklerden demlenen bir fincan kahve içtik — ve o ana kadar tattığımız hiçbir şeye benzemiyordu. Meyvemsi, dengeli, unutulmaz bir lezzet.",
+    "paragraph2": "O gün orada aldığımız ilhamla yola çıktık: dünyanın en özel çekirdeklerini bulup, onları hak ettikleri özenle sizin fincanınıza taşımak.",
+    "heroAlt": "Kahve çekirdekleri kavrulurken",
     "valuesHeading": "Değerlerimiz",
     "value1Title": "Kalite",
     "value1Description": "Sadece özenle seçilmiş, izlenebilir kaynaklardan gelen çekirdeklerle çalışıyoruz.",
