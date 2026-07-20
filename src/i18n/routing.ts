@@ -5,7 +5,10 @@ export const routing = defineRouting({
   defaultLocale: "tr",
   pathnames: {
     "/": "/",
-    "/hakkimizda": "/hakkimizda",
+    "/hakkimizda": {
+      tr: "/hakkimizda",
+      en: "/about",
+    },
     "/urunler": {
       tr: "/urunler",
       en: "/products",
@@ -14,6 +17,9 @@ export const routing = defineRouting({
       tr: "/urunler/[slug]",
       en: "/products/[slug]",
     },
-    "/iletisim": "/iletisim",
+    "/iletisim": {
+      tr: "/iletisim",
+      en: "/contact",
+    },
   },
 });

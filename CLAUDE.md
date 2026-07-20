@@ -67,10 +67,10 @@ src/
 - URL yapısı: `/tr/urunler`, `/en/products` gibi locale'e göre farklı slug istiyorsak `routing.ts` içinde `pathnames` tanımlanır — istemiyorsak sabit slug kullanılır
 - **Güncel `pathnames` haritası** (`src/i18n/routing.ts`):
   - `/` → TR: `/`, EN: `/`
-  - `/hakkimizda` → TR: `/hakkimizda`, EN: `/hakkimizda` (henüz farklılaştırılmadı)
+  - `/hakkimizda` → TR: `/hakkimizda`, EN: `/about`
   - `/urunler` → TR: `/urunler`, EN: `/products`
   - `/urunler/[slug]` → TR: `/urunler/[slug]`, EN: `/products/[slug]`
-  - `/iletisim` → TR: `/iletisim`, EN: `/iletisim` (henüz farklılaştırılmadı)
+  - `/iletisim` → TR: `/iletisim`, EN: `/contact`
   - Dinamik olmayan rotalara `next-intl`'in typed `Link`'i ile link verirken düz string href yeterli; `/urunler/[slug]` gibi parametreli rotalarda `href={{ pathname: '/urunler/[slug]', params: { slug } }}` object formu kullanılmalı
   - `src/global.d.ts` içinde `next-intl`'in `AppConfig` tipi `routing.locales`/`routing.pathnames`'e göre augment edilir — `tsc` bu sayede geçersiz href'leri derleme zamanında yakalar
 - Yeni bir metin eklerken önce `messages/*.json`'a key ekle, sonra component'te `useTranslations()` / `getTranslations()` ile çağır — asla hardcoded TR/EN metin yazma
