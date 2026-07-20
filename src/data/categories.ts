@@ -2,27 +2,27 @@ import type { Category } from "@/types";
 
 export const categories: Category[] = [
   {
-    id: "filter-coffee",
-    slug: "filtre-kahve",
+    id: "kahveler",
+    slug: "kahveler",
     name: {
-      tr: "Filtre Kahve",
-      en: "Filter Coffee",
+      tr: "Kahveler",
+      en: "Coffees",
     },
   },
   {
-    id: "espresso-based",
-    slug: "espresso-bazli",
+    id: "ozel-demleme-kahveler",
+    slug: "ozel-demleme-kahveler",
     name: {
-      tr: "Espresso Bazlı",
-      en: "Espresso Based",
+      tr: "Özel Demleme Kahveler",
+      en: "Specialty Brew Coffees",
     },
   },
   {
-    id: "coffee-equipment",
-    slug: "kahve-ekipmanlari",
+    id: "soguk-icecekler",
+    slug: "soguk-icecekler",
     name: {
-      tr: "Kahve Ekipmanları",
-      en: "Coffee Equipment",
+      tr: "Soğuk İçecekler",
+      en: "Cold Drinks",
     },
   },
 ];

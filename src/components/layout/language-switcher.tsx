@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { Globe } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
@@ -10,11 +11,16 @@ const locales: Locale[] = ["tr", "en"];
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
   const pathname = usePathname();
+  const params = useParams();
   const router = useRouter();
   const t = useTranslations("Layout");
 
   function switchLocale(nextLocale: Locale) {
-    router.replace(pathname, { locale: nextLocale });
+    router.replace(
+      // @ts-expect-error -- `params` matches `pathname` for the current route.
+      { pathname, params },
+      { locale: nextLocale },
+    );
   }
 
   return (

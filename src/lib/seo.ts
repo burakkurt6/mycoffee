@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
+import { getPathname } from "@/i18n/navigation";
 import { siteConfig } from "@/data/site";
 import { env } from "@/lib/env";
 import type { Locale } from "@/types";
@@ -9,9 +10,11 @@ const ogLocaleMap: Record<Locale, string> = {
   en: "en_US",
 };
 
+type Href = Parameters<typeof getPathname>[0]["href"];
+
 type BuildMetadataParams = {
   locale: Locale;
-  path: string;
+  href: Href;
   title: string;
   description: string;
   image?: string;
@@ -21,26 +24,25 @@ function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_SITE_URL}${path}`;
 }
 
+function localizedUrl(locale: Locale, href: Href) {
+  // getPathname already returns the locale-prefixed pathname (e.g. "/en/products").
+  return absoluteUrl(getPathname({ locale, href }));
+}
+
 export function buildMetadata({
   locale,
-  path,
+  href,
   title,
   description,
   image,
 }: BuildMetadataParams): Metadata {
-  const normalizedPath = path === "/" ? "" : path;
-  const canonicalUrl = absoluteUrl(`/${locale}${normalizedPath}`);
+  const canonicalUrl = localizedUrl(locale, href);
   const fullTitle = `${title} | ${siteConfig.name}`;
 
   const languages = Object.fromEntries(
-    routing.locales.map((locale) => [
-      locale,
-      absoluteUrl(`/${locale}${normalizedPath}`),
-    ]),
+    routing.locales.map((l) => [l, localizedUrl(l, href)]),
   );
-  languages["x-default"] = absoluteUrl(
-    `/${routing.defaultLocale}${normalizedPath}`,
-  );
+  languages["x-default"] = localizedUrl(routing.defaultLocale, href);
 
   const images = image ? [{ url: absoluteUrl(image) }] : undefined;
 

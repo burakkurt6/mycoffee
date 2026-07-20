@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/types";
 
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "ContactPage" });
 
   return buildMetadata({
-    locale: locale as Locale,
-    path: "/iletisim",
+    locale,
+    href: "/iletisim",
     title: t("title"),
     description: t("description"),
   });

@@ -1,8 +1,13 @@
+import type { ComponentProps } from "react";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/data/site";
 import type { Locale } from "@/types";
 import { LanguageSwitcher } from "./language-switcher";
+
+// data/site.ts içindeki NavItem.href genel `string` tipinde (framework-agnostic);
+// next-intl'in typed Link'i statik (parametresiz) pathname key'lerini bekliyor.
+type StaticHref = Exclude<ComponentProps<typeof Link>["href"], object>;
 
 export function SiteHeader() {
   const locale = useLocale() as Locale;
@@ -18,7 +23,7 @@ export function SiteHeader() {
             {siteConfig.nav.map((item) => (
               <li key={item.href}>
                 <Link
-                  href={item.href}
+                  href={item.href as StaticHref}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   {item.label[locale]}

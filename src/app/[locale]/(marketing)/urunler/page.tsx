@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ProductGrid } from "@/components/products/product-grid";
+import { ProductFilter } from "@/components/products/product-filter";
+import { categories } from "@/data/categories";
 import { products } from "@/data/products";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/types";
 
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -15,8 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "ProductsPage" });
 
   return buildMetadata({
-    locale: locale as Locale,
-    path: "/urunler",
+    locale,
+    href: "/urunler",
     title: t("title"),
     description: t("description"),
   });
@@ -37,7 +38,7 @@ function ProductsPageContent() {
       <h1 className="text-3xl font-semibold tracking-tight">{t("title")}</h1>
       <p className="mt-2 text-muted-foreground">{t("description")}</p>
       <div className="mt-10">
-        <ProductGrid products={products} />
+        <ProductFilter categories={categories} products={products} />
       </div>
     </main>
   );

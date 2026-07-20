@@ -13,7 +13,10 @@ export function ProductCard({ product }: Props) {
   const format = useFormatter();
 
   return (
-    <Link href={`/urunler/${product.slug}`} className="group block h-full">
+    <Link
+      href={{ pathname: "/urunler/[slug]", params: { slug: product.slug } }}
+      className="group block h-full"
+    >
       <Card className="h-full overflow-hidden py-0 transition-shadow group-hover:shadow-md">
         <div className="relative aspect-square w-full">
           <Image
