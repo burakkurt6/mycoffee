@@ -1,6 +1,6 @@
 import { products } from "@/data/products";
-import type { Product } from "@/types";
+import type { Locale, Product } from "@/types";
 
-export function getProductBySlug(slug: string): Product | undefined {
-  return products.find((product) => product.slug === slug);
+export function getProductBySlug(slug: string, locale: Locale): Product | undefined {
+  return products.find((product) => product.slug[locale] === slug);
 }

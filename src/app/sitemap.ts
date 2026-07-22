@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     products.map((product) => ({
       url: localizedUrl(locale, {
         pathname: "/urunler/[slug]",
-        params: { slug: product.slug },
+        params: { slug: product.slug[locale] },
       }),
       lastModified: now,
       changeFrequency: "monthly" as const,

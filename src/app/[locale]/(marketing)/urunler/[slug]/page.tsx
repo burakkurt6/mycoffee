@@ -18,13 +18,13 @@ export const dynamic = "force-static";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    products.map((product) => ({ locale, slug: product.slug })),
+    products.map((product) => ({ locale, slug: product.slug[locale] })),
   );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = getProductBySlug(slug, locale);
 
   if (!product) {
     return {};
@@ -32,7 +32,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return buildMetadata({
     locale,
-    href: { pathname: "/urunler/[slug]", params: { slug } },
+    // Each locale has its own slug for this product, so the href must be
+    // resolved per-locale rather than reusing the current locale's slug.
+    href: (hrefLocale) => ({
+      pathname: "/urunler/[slug]",
+      params: { slug: product.slug[hrefLocale] },
+    }),
     title: product.name[locale],
     description: product.description[locale],
     image: product.image,
@@ -43,7 +48,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  const product = getProductBySlug(slug);
+  const product = getProductBySlug(slug, locale);
 
   if (!product) {
     notFound();

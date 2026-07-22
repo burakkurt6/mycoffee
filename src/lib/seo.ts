@@ -12,9 +12,14 @@ const ogLocaleMap: Record<Locale, string> = {
 
 type Href = Parameters<typeof getPathname>[0]["href"];
 
+// A plain Href is used as-is for every locale. When a route's dynamic segment
+// itself translates per locale (e.g. product slugs), pass a function instead
+// so each locale gets its own resolved href.
+type HrefInput = Href | ((locale: Locale) => Href);
+
 type BuildMetadataParams = {
   locale: Locale;
-  href: Href;
+  href: HrefInput;
   title: string;
   description: string;
   image?: string;
@@ -24,9 +29,13 @@ function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_SITE_URL}${path}`;
 }
 
-function localizedUrl(locale: Locale, href: Href) {
+function resolveHref(href: HrefInput, locale: Locale): Href {
+  return typeof href === "function" ? href(locale) : href;
+}
+
+function localizedUrl(locale: Locale, href: HrefInput) {
   // getPathname already returns the locale-prefixed pathname (e.g. "/en/products").
-  return absoluteUrl(getPathname({ locale, href }));
+  return absoluteUrl(getPathname({ locale, href: resolveHref(href, locale) }));
 }
 
 export function buildMetadata({

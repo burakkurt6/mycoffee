@@ -13,7 +13,7 @@ export interface Category {
 
 export interface Product {
   id: string;
-  slug: string;
+  slug: LocalizedString;
   categoryId: string;
   name: LocalizedString;
   description: LocalizedString;

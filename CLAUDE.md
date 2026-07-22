@@ -73,6 +73,7 @@ src/
   - `/iletisim` → TR: `/iletisim`, EN: `/contact`
   - Dinamik olmayan rotalara `next-intl`'in typed `Link`'i ile link verirken düz string href yeterli; `/urunler/[slug]` gibi parametreli rotalarda `href={{ pathname: '/urunler/[slug]', params: { slug } }}` object formu kullanılmalı
   - `src/global.d.ts` içinde `next-intl`'in `AppConfig` tipi `routing.locales`/`routing.pathnames`'e göre augment edilir — `tsc` bu sayede geçersiz href'leri derleme zamanında yakalar
+  - Ürün `slug`'ları da locale'e göre farklılaşabiliyor (`data/products.ts`'te `slug: LocalizedString`, örn. `turk-kahvesi`/`turkish-coffee`) — bu yüzden `[locale]/layout.tsx`'teki `<NextIntlClientProvider locale={locale}>`'a **her zaman açık `locale` prop'u geçilmeli**; implicit inference'a bırakılırsa (`<NextIntlClientProvider>`), `urunler/[slug]` gibi `force-static` + iç içe dinamik segment içeren rotalarda `useLocale()` yanlış (varsayılan) locale'e sabitleniyor — bu da dil değiştirici gibi client component'lerde sessizce yanlış URL üretilmesine yol açar
 - Yeni bir metin eklerken önce `messages/*.json`'a key ekle, sonra component'te `useTranslations()` / `getTranslations()` ile çağır — asla hardcoded TR/EN metin yazma
 
 ## İçerik Güncelleme

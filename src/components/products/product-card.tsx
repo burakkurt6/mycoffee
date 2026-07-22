@@ -14,7 +14,7 @@ export function ProductCard({ product }: Props) {
 
   return (
     <Link
-      href={{ pathname: "/urunler/[slug]", params: { slug: product.slug } }}
+      href={{ pathname: "/urunler/[slug]", params: { slug: product.slug[locale] } }}
       className="group block h-full"
     >
       <Card className="h-full overflow-hidden py-0 transition-shadow group-hover:shadow-md">

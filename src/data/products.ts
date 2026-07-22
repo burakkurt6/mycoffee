@@ -4,7 +4,7 @@ import type { Product } from "@/types";
 export const products: Product[] = [
   {
     id: "filtre-kahve",
-    slug: "filtre-kahve",
+    slug: { tr: "filtre-kahve", en: "filter-coffee" },
     categoryId: "ozel-demleme-kahveler",
     name: {
       tr: "Filtre Kahve",
@@ -21,7 +21,7 @@ export const products: Product[] = [
   },
   {
     id: "turk-kahvesi",
-    slug: "turk-kahvesi",
+    slug: { tr: "turk-kahvesi", en: "turkish-coffee" },
     categoryId: "kahveler",
     name: {
       tr: "Türk Kahvesi",
@@ -37,7 +37,7 @@ export const products: Product[] = [
   },
   {
     id: "americano",
-    slug: "americano",
+    slug: { tr: "americano", en: "americano" },
     categoryId: "ozel-demleme-kahveler",
     name: {
       tr: "Americano",
@@ -53,7 +53,7 @@ export const products: Product[] = [
   },
   {
     id: "espresso",
-    slug: "espresso",
+    slug: { tr: "espresso", en: "espresso" },
     categoryId: "kahveler",
     name: {
       tr: "Espresso",
@@ -69,7 +69,7 @@ export const products: Product[] = [
   },
   {
     id: "cappuccino",
-    slug: "cappuccino",
+    slug: { tr: "cappuccino", en: "cappuccino" },
     categoryId: "kahveler",
     name: {
       tr: "Cappuccino",
@@ -86,7 +86,7 @@ export const products: Product[] = [
   },
   {
     id: "latte",
-    slug: "latte",
+    slug: { tr: "latte", en: "latte" },
     categoryId: "kahveler",
     name: {
       tr: "Latte",
@@ -102,7 +102,7 @@ export const products: Product[] = [
   },
   {
     id: "mocha",
-    slug: "mocha",
+    slug: { tr: "mocha", en: "mocha" },
     categoryId: "kahveler",
     name: {
       tr: "Mocha",
@@ -118,7 +118,7 @@ export const products: Product[] = [
   },
   {
     id: "frappe",
-    slug: "frappe",
+    slug: { tr: "frappe", en: "frappe" },
     categoryId: "kahveler",
     name: {
       tr: "Frappe",
@@ -134,7 +134,7 @@ export const products: Product[] = [
   },
   {
     id: "cool-lime",
-    slug: "cool-lime",
+    slug: { tr: "cool-lime", en: "cool-lime" },
     categoryId: "soguk-icecekler",
     name: {
       tr: "Cool Lime",
