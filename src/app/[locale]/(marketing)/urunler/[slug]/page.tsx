@@ -93,6 +93,7 @@ function ProductDetailContent({
     <main className="mx-auto w-full max-w-4xl flex-1 px-6 py-16">
       <Link
         href="/urunler"
+        locale={locale}
         className="text-sm text-muted-foreground hover:text-foreground"
       >
         {backToProductsLabel}
