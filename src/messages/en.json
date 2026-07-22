@@ -1,7 +1,8 @@
 {
   "HomePage": {
     "title": "Start Your Day With Coffee",
-    "description": "Discover our coffees, carefully roasted and brewed from fresh beans."
+    "description": "Discover our coffees, carefully roasted and brewed from fresh beans.",
+    "heroAlt": "Roasted coffee beans in a bowl"
   },
   "Layout": {
     "changeLanguage": "Change language"
