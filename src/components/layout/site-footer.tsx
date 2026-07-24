@@ -23,7 +23,7 @@ export function SiteFooter() {
         fill
         loading="lazy"
         sizes="100vw"
-        className="absolute inset-0 -z-10 object-cover opacity-35"
+        className="absolute inset-0 -z-10 object-cover opacity-22"
       />
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-1">

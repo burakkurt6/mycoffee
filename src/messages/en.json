@@ -2,7 +2,9 @@
   "HomePage": {
     "title": "Start Your Day With Coffee",
     "description": "Discover our coffees, carefully roasted and brewed from fresh beans.",
-    "heroAlt": "Roasted coffee beans in a bowl"
+    "heroAlt": "Roasted coffee beans in a bowl",
+    "featuredHeading": "Featured Products",
+    "viewAllProducts": "View All Products"
   },
   "Layout": {
     "changeLanguage": "Change language"

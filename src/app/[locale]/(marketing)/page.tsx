@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { ProductGrid } from "@/components/products/product-grid";
+import { getFeaturedProducts } from "@/lib/products";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/types";
 
@@ -30,6 +33,7 @@ export default async function Home({ params }: Props) {
 
 function HomeContent() {
   const t = useTranslations("HomePage");
+  const featuredProducts = getFeaturedProducts();
 
   return (
     <main className="flex-1">
@@ -52,6 +56,23 @@ function HomeContent() {
           </div>
         </div>
       </div>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          {t("featuredHeading")}
+        </h2>
+        <div className="mt-8">
+          <ProductGrid products={featuredProducts} />
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/urunler"
+            className="inline-flex items-center rounded-full border px-6 py-3 text-sm font-medium transition-colors hover:bg-foreground hover:text-background"
+          >
+            {t("viewAllProducts")}
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
